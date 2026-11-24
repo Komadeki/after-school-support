@@ -1,0 +1,27 @@
+:root{color-scheme:light;--ink:#193938;--teal:#0a666b;--paper:#f7f7f3;--line:#cbd8d1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.85 system-ui,"Hiragino Sans",sans-serif}
+header{background:#0c1d20;color:#f6f3e8}
+nav,main{width:min(100% - 2rem,48rem);margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+nav a{color:inherit;text-decoration:none;font-weight:700}
+.brand{display:flex;align-items:center;gap:.6rem;letter-spacing:.04em}
+.brand img{border-radius:23%}
+main{padding:clamp(1rem,4vw,3rem) 0 4rem}
+.hero{isolation:isolate;position:relative;overflow:hidden;background:radial-gradient(ellipse at 96% 10%,#526358,#193c3c 55%,#10272b);color:#f6f4e9;border:1px solid #3a5450;border-radius:1.1rem;padding:clamp(1.3rem,5vw,3.5rem);box-shadow:0 1.3rem 2rem -1.85rem #1b393a}
+.hero::after{content:"";position:absolute;z-index:-1;right:-6%;bottom:-22%;width:45%;height:80%;transform:rotate(-28deg);border-left:1px solid #fae6ad6b;background:linear-gradient(90deg,#e8dcae18,transparent)}
+.tag{margin:0;color:#f1d592;font-size:.78rem;font-weight:700;letter-spacing:.08em}
+h1{font-size:clamp(1.85rem,6vw,3.6rem);line-height:1.28;letter-spacing:-.05em;margin:.6rem 0;text-wrap:balance}
+h2{font-size:clamp(1.2rem,3vw,1.6rem);line-height:1.5;margin:0;letter-spacing:-.025em}
+p{margin:.65rem 0}
+section{padding:1.55rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1rem}
+a{color:var(--teal);text-underline-offset:.22em;overflow-wrap:anywhere}
+a:focus-visible{outline:3px solid #ad7936;outline-offset:4px}
+@media(prefers-reduced-motion:no-preference){
+ @supports(animation-timeline:view()){
+  section h2{animation:rise 1s ease-out backwards;animation-timeline:view();animation-range:entry 0% entry 85%}
+  body::before{content:"";position:fixed;top:0;left:0;right:0;height:2px;background:#cca25d;z-index:4;transform-origin:left;animation:read 1s linear both;animation-timeline:scroll(root block)}
+ }
+}
+@keyframes rise{from{opacity:.78;transform:translateY(10px)}}
+@keyframes read{from{transform:scaleX(0)}to{transform:scaleX(1)}}
