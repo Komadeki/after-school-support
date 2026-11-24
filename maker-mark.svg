@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>KOMADEKI</title>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#12828a"/>
+      <stop offset="1" stop-color="#07565e"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#field)"/>
+  <path d="M0 117 117 0h11v128H0z" fill="#083f46" opacity=".16"/>
+  <!-- The cut in the upright repeats the angle of the code bracket. -->
+  <path d="M31 33h15v60H31V73l9-10-9-10z" fill="#faf8ef"/>
+  <path d="M66 41h20L64 63l30 30H73L43 63z" fill="#faf8ef"/>
+  <!-- A northeast pointer caps the upper diagonal, with room for a round crop. -->
+  <path d="m70 31 27-3-4 27-7-11-5 5-7-7 5-5z" fill="#f4cd79"/>
+</svg>
